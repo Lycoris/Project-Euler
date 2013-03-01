@@ -13,4 +13,4 @@ def sum_until(num)
 		return total
 end
 
-puts "Answer: #{sum_until(999)}"
+puts "Answer: #{sum_until(999)}"	#Answer: 233168
