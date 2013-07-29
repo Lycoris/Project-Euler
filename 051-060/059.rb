@@ -5,21 +5,20 @@
 
 def XOR_decryption(file)
 	code = open(file){|f| f.read}.split(",")
-	c = code.size
 	code_group1 = Array.new
 	code_group2 = Array.new
 	code_group3 = Array.new
 	xor = Array.new(3)
-	for i in 1..c
-		case i % 3
+	code.each_index {|i|
+		case (i + 1) % 3
 		when 1
-			code_group1 = code_group1 + [code[i - 1].to_i]
+			code_group1 = code_group1 + [code[i].to_i]
 		when 2
-			code_group2 = code_group2 + [code[i - 1].to_i]
+			code_group2 = code_group2 + [code[i].to_i]
 		when 0
-			code_group3 = code_group3 + [code[i - 1].to_i]
+			code_group3 = code_group3 + [code[i].to_i]
 		end
-	end
+	}
 	max = Array.new
 	max[0] = code_group1.max_by {|value| code_group1.count(value)}
 	max[1] = code_group2.max_by {|value| code_group2.count(value)}
@@ -34,19 +33,19 @@ def XOR_decryption(file)
 	end
 	decode = ""
 	answer = 0
-	for i in 1..c
-		case i % 3
+	code.each_index {|i|
+		case (i + 1) % 3
 		when 1
-			decode = decode + (code_group1[i / 3] ^ xor[0]).chr
-			answer = answer + (code_group1[i / 3] ^ xor[0])
+			decode = decode + (code_group1[(i + 1) / 3] ^ xor[0]).chr
+			answer = answer + (code_group1[(i + 1) / 3] ^ xor[0])
 		when 2
-			decode = decode + (code_group2[i / 3] ^ xor[1]).chr
-			answer = answer + (code_group2[i / 3] ^ xor[1])
+			decode = decode + (code_group2[(i + 1) / 3] ^ xor[1]).chr
+			answer = answer + (code_group2[(i + 1) / 3] ^ xor[1])
 		when 0
-			decode = decode + (code_group3[(i / 3) - 1] ^ xor[2]).chr
-			answer = answer + (code_group3[(i / 3) - 1] ^ xor[2])
+			decode = decode + (code_group3[((i + 1) / 3) - 1] ^ xor[2]).chr
+			answer = answer + (code_group3[((i + 1) / 3) - 1] ^ xor[2])
 		end
-	end
+	}
 	p decode
 	# "(The Gospel of John, chapter 1) 
 	# 1 In the beginning the Word already existed. He was with God, and he was God. 
