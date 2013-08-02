@@ -9,10 +9,10 @@ def Passcode_derivation(keylog)
 	log.each_index{|i| log[i] = log[i].split(//)}
 	log = log.transpose
 	frequency = Array.new(3)
-	for i in 0..2
+	3.times {|i|
 		frequency[i] = {}
 		frequency[i].default = 0
-	end
+	}
 	passcode = ""
 	log.each_index {|try|
 		log[try].each_index {|col|
@@ -25,10 +25,10 @@ def Passcode_derivation(keylog)
 				passcode += k
 				p passcode
 				frequency = Array.new(3)
-				for i in 0..2
+				3.times {|i|
 					frequency[i] = {}
 					frequency[i].default = 0
-				end
+				}
 				log.each_index {|try|
 					log[try].each_index {|col|
 						if log[try][col] == k then
