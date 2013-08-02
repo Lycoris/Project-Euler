@@ -16,9 +16,9 @@ end
 
 def make_database(n)
 	@max = 0
-	for i in 0..(Math.log10(n))
+	Math.log10(n).floor.times {|i|
 		@max += ((n / (10 ** i)) % 10) ** 2
-	end
+	}
 	for i in 1..@max
 		x = i
 		while 0 < 1
@@ -55,9 +55,9 @@ def database_search(n)
 				next
 			end
 		end
-		for j in 0..(Math.log10(i))
+		Math.log10(i).floor.times {|j|
 			x += ((i / (10 ** j)) % 10) ** 2
-		end
+		}
 		if @database[x] == true then
 			a += 1
 		end
