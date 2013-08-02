@@ -70,9 +70,9 @@ end
 
 def checkout_loop(n)
 	ans = 0
-	for i in 1..n
-		ans += darts_checkout(i)
-	end
+	n.times {|i|
+		ans += darts_checkout(i + 1)
+	}
 	return ans
 end
 
