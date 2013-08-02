@@ -6,8 +6,8 @@
 def sum_until(num)
 	total = 0
 	num.times {|n|
-		if n.modulo(3)==0 or n.modulo(5)==0 then
-			total += n
+		if (n + 1).modulo(3) == 0 or (n + 1).modulo(5) == 0 then
+			total += n + 1
 		end
 	}
 	return total
