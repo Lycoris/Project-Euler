@@ -5,21 +5,24 @@
 def Convergents_of_e()
 	a = Array.new
 	for i in 1..33
-		a.push 1, 2 * i, 1
-	end
+	33.times {|i|
+		a.push 1, 2 * (i + 1), 1
+	}
 	a = a.reverse
 	n = 0
 	for i in 1..a.size
-		n += a[i - 1]
+	a.size.times {|i|
+		n += a[i]
 		n = Rational(1, n)
-	end
+	}
 	n += 2
 	r = Rational(n).numerator
 	r = r.to_s.split(//)
 	answer = 0
 	for i in 1..r.size
-		answer += r[i - 1].to_i
-	end
+	r.size.times {|i|
+		answer += r[i].to_i
+	}
 	return answer
 end
 
