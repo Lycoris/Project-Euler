@@ -3,10 +3,10 @@
 #
 def large_non_Mersenne_prime
 	a = 1
-	for i in 1..7830457
+	7830457.times {|i|
 		a *= 2
 		a = a % 10000000000
-	end
+	}
 	a = (a * 28433) % 10000000000
 	a += 1
 	return a
