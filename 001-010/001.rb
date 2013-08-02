@@ -4,13 +4,13 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 def sum_until(num)
-		total = 0
-		for n in 1..num do
-				if n.modulo(3)==0 or n.modulo(5)==0 then
-						total += n
-				end
+	total = 0
+	num.times {|n|
+		if n.modulo(3)==0 or n.modulo(5)==0 then
+			total += n
 		end
-		return total
+	}
+	return total
 end
 
 puts "Answer: #{sum_until(999)}"	#Answer: 233168
