@@ -5,13 +5,9 @@
 
 def factorial_digit_sum(x)
 	a, s = 1, 0
-	x.downto(2) {|n|
-		a *= n
-	}
+	x.downto(2) {|n| a *= n}
 	a = a.to_s.split(//)
-	a.each {|i|
-		s += i.to_i
-	}
+	a.each {|i| s += i.to_i}
 	return s
 end
 
