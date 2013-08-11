@@ -2,7 +2,7 @@
 #
 #
 
-def a?
+def a(n)
 	ans = 0
 	powers
 	@arr.each_index {|i|
@@ -17,7 +17,7 @@ def a?
 				if k == 1 then
 					ans += 1
 					p @arr[i]
-					if ans == 30 then
+					if ans == n then
 						return @arr[i]
 					end
 					break
@@ -55,4 +55,4 @@ def digit_sum(n)
 end
 
 
-	puts "Answer: #{a?}"	# Answer: 248155780267521
+	puts "Answer: #{a(30)}"	# Answer: 248155780267521
