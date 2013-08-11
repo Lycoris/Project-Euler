@@ -1,7 +1,3 @@
-# http://projecteuler.net/problem=18
-#
-#
-
 def maximum_path_sum(triangle)
 	f = open(triangle)
 	t = f.read.split(/\n/)
