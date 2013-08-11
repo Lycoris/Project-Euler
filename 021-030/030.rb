@@ -8,9 +8,7 @@ def digit_powers(n)
 	for i in 2..10 ** (n + 1)
 		arr = i.to_s.split(//)
 		a = 0
-		arr.each {|d|
-			a += d.to_i ** n
-		}
+		arr.each {|d| a += d.to_i ** n}
 		if a == i then
 			ans += i
 		end
