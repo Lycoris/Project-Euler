@@ -3,6 +3,7 @@
 #
 
 require 'prime'
+require './coprime'
 
 def Totient_maximum()
 	a = make_prime_chain(18)
@@ -19,18 +20,6 @@ def make_prime_chain(n)
 end
 
 
-def coprime?(m, n)
-	a = Prime.prime_division(m)
-	b = Prime.prime_division(n)
-	a = Hash[*a.flatten]
-	b = Hash[*b.flatten]
-	a.each_key {|k|
-		if b[k] != nil then
-			return false
-		end
-	}
-	return true
-end
 
 
 	puts "Answer: #{Totient_maximum()}"		# Answer: 510510
