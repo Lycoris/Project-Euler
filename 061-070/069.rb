@@ -3,7 +3,6 @@
 #
 
 require 'prime'
-require './coprime'
 
 def Totient_maximum()
 	a = make_prime_chain(18)
