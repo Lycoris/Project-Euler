@@ -7,9 +7,7 @@ def largest_palindrome_product
 	for i in 100..999
 		for j in 100..999
 			n = i * j
-			if palindrome?(n) == true and n > a then
-				a = n
-			end
+			a = n if palindrome?(n) and n > a
 		end
 	end
 	return a
@@ -18,11 +16,8 @@ end
 
 def palindrome?(num)
 	s = num.to_s.split(//)
-	if s == s.reverse then
-		return true
-	else
-		return false
-	end
+	return true if s == s.reverse
+	return false
 end
 
 
