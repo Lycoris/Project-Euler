@@ -9,10 +9,7 @@ def prime_square_remainders(b)
 	n = 0
 	Prime.each {|p|
 		n += 1
-		p n
-		if r(n, p) > b then
-			return n
-		end
+		return n if r(n, p) > b
 	}
 end
 

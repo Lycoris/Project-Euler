@@ -16,4 +16,4 @@ def nth_prime(num)
 end
 
 
-	puts "Answer: #{nth_prime(10001)}"		# Answer: 104743
+puts "Answer: #{nth_prime(10001)}"		# Answer: 104743

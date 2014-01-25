@@ -21,4 +21,4 @@ def palindrome?(num)
 end
 
 
-	puts "Answer: #{largest_palindrome_product}"	# Answer: 906609
+puts "Answer: #{largest_palindrome_product}"	# Answer: 906609

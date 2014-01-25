@@ -16,4 +16,4 @@ def smallest_multiple(n)
 end
 
 
-	puts "Answer: #{smallest_multiple(20)}"		# Answer: 232792560
+puts "Answer: #{smallest_multiple(20)}"		# Answer: 232792560

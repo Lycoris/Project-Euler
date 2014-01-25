@@ -13,4 +13,4 @@ def sum_square_difference(x)
 end
 
 
-	puts "Answer: #{sum_square_difference(100)}"	# Answer: 25164150
+puts "Answer: #{sum_square_difference(100)}"	# Answer: 25164150

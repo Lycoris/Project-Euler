@@ -13,4 +13,4 @@ def largest_product_in_a_series
 end
 
 
-	puts "Answer: #{largest_product_in_a_series()}"		# Answer: 40824
+puts "Answer: #{largest_product_in_a_series()}"		# Answer: 40824

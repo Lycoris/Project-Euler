@@ -15,4 +15,4 @@ def summation_of_primes(x)
 end
 
 
-	puts "Answer: #{summation_of_primes(2000000)}"		# Answer: 142913828922
+puts "Answer: #{summation_of_primes(2000000)}"		# Answer: 142913828922
