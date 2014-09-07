@@ -3,7 +3,7 @@
 #
 #
 
-require '../011-020/triangle'
+require '../lib/triangle'
 
 
 	puts "Answer: #{maximum_path_sum("triangle.txt")}"		# Answer: 7273

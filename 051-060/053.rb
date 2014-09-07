@@ -2,7 +2,7 @@
 #
 #
 
-require '../111-120/fact'
+require '../lib/fact'
 
 def conbi(l)
 	answer = 0
