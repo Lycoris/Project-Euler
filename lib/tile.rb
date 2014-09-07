@@ -1,5 +1,5 @@
 
-require './fact'
+require_relative 'fact'
 
 def tile(u, c)
 	ans = 0
