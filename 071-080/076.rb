@@ -12,15 +12,19 @@ def counting_summations(num)
 end
 
 
-def p(n, r)
-	if n < r then
-		return 0
-	elsif n == r or r == 1 then
-		return 1
+def p(k, n)
+  @p ||= Array.new(101).map{Array.new(101, nil)}
+	if k > n then
+    @p[k][n] ||= 0
+	elsif k == n then
+    @p[k][n] ||= 1
 	else
-		return p(n - r, r) + p(n - 1, r - 1)
+    @p[k + 1][n] ||= p(k + 1, n)
+    @p[k][n - k] ||= p(k, n - k)
+    @p[k][n] ||= @p[k + 1][n] + @p[k][n - k]
 	end
+  return @p[k][n]
 end
 
 
-	puts "Answer: #{counting_summations(100)}"		# Answer: 190569291
+	puts "Answer: #{p(1, 100) - 1}"		# Answer: 190569291
