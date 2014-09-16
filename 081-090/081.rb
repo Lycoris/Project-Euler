@@ -13,11 +13,11 @@ def matrix_search(matrix)
 	}
 	m.each_index {|v|
 		m[v].each_index {|h|
-			if v - 1 > -1 and h - 1 > -1 then
+			if v > 0 and h > 0 then
 				m[v][h] += [m[v - 1][h], m[v][h - 1]].sort.first
-			elsif v - 1 < 0  and h - 1 > -1  then
+			elsif v < 1  and h > 0  then
 				m[v][h] += m[v][h - 1]
-			elsif h - 1 < 0 and v - 1 > -1 then
+			elsif h < 1 and v > 0 then
 				m[v][h] += m[v - 1][h]
 			end
 		}
@@ -25,8 +25,6 @@ def matrix_search(matrix)
 	answer = m[m.size - 1].last
 	return answer
 end
-
-
 
 
 	puts "Answer: #{matrix_search("matrix.txt")}"	# Answer: 427337
