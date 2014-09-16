@@ -21,7 +21,6 @@ def matrix_search(matrix)
 				m[v][h] += m[v - 1][h]
 			end
 		}
-		p m[v]
 	}
 	answer = m[m.size - 1].last
 	return answer
