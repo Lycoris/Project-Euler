@@ -3,15 +3,6 @@
 #
 
 
-def counting_summations(num)
-	ans = 0
-	for i in 2..num
-		ans += p(num, i)
-	end
-	return ans
-end
-
-
 def p(k, n)
   @p ||= Array.new(101).map{Array.new(101, nil)}
 	if k > n then
