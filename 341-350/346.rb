@@ -16,9 +16,7 @@ def sum_sr(l)
     end
     i += 1
   end
-  ans = 0
-  a.uniq!.each {|sr| ans += sr}
-  return ans
+  return a.uniq!.inject(0) {|r, sr| r += sr}
 end
 
 
