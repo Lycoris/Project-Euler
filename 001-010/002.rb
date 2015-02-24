@@ -2,21 +2,17 @@
 #
 #
 
+require '../lib/fib'
 
-def even_fibonacci_numbers(num)
-	a = 1
-	b = 2
-	c = 0
-	total = 2
-	while c < 4000001
-		c = a + b
-		total += c if c.even?
-		a = b
-		b = c
-	end
-	return total
+
+def even_fibonacci_numbers(l)
+  n = 3
+  ans = 0
+  until fib(n) > l
+    ans += fib(n)
+    n += 3
+  end
+  return ans
 end
 
-
 puts "Answer: #{even_fibonacci_numbers(4000000)}"	# Answer: 4613732
-
