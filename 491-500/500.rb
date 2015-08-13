@@ -20,7 +20,6 @@ def problem_500(n)
       seq[i][1] += seq[i][1] + 1
       redo
     elsif seq[i][1] == 1 then
-      puts seq.size
       seq.each {|pr| answer *= pr[0] ** pr[1]}
       return answer % 500500507
     end
