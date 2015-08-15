@@ -3,16 +3,15 @@
 #
 
 
-def sum
+def sum(d)
 	ans = 0
-	File.open("013.txt") {|f|
+	File.open(d) {|f|
 		while n = f.gets
-			n = n.chomp.to_i
-			ans += n
+			ans += n.chomp.to_i
 		end
 	}
-	p ans
+	return ans / 10 ** (Math.log10(ans).ceil - 10)
 end
 
 
-sum
+  puts "Answer: #{sum("013.txt")}"  # Answer: 5537376230
