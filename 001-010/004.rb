@@ -5,7 +5,7 @@
 def largest_palindrome_product
 	a = 0
 	for i in 100..999
-		for j in 100..999
+		for j in i..999
 			n = i * j
 			a = n if palindrome?(n) and n > a
 		end
