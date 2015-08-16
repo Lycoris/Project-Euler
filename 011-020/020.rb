@@ -5,4 +5,4 @@
 require '../lib/fact'
 
 
-	puts "Answer: #{fact(100).to_s.split(//).map(&:to_i).inject(:+)}"	# Answer: 648
+puts "Answer: #{fact(100).to_s.split(//).map(&:to_i).inject(:+)}"	# Answer: 648
