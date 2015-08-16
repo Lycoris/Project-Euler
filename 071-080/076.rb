@@ -18,4 +18,4 @@ def p(k, n)
 end
 
 
-	puts "Answer: #{p(1, 100) - 1}"		# Answer: 190569291
+puts "Answer: #{p(1, 100) - 1}"		# Answer: 190569291

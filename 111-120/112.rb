@@ -10,9 +10,7 @@ def bouncy_numbers(r)
 	rate = 0
 	until rate > r or rate == r
 		n += 1
-		if bouncy_number?(n) == true then
-			a += 1
-		end
+    a += 1 if bouncy_number?(n) == true
 		rate = a.to_f / n.to_f
 		p rate
 	end
@@ -32,12 +30,10 @@ def bouncy_number?(n)
 				judge[:increasing] = false
 			end
 		end
-		if judge[:increasing] == false and judge[:decreasing] == false then
-			return true
-		end
+    return true if judge[:increasing] == false and judge[:decreasing] == false
 	}
 	return false
 end
 
 
-	puts "Answer: #{bouncy_numbers(99)}"	# Answer: 1587000
+puts "Answer: #{bouncy_numbers(99)}"	# Answer: 1587000

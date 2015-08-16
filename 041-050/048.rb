@@ -17,4 +17,4 @@ def self_powers(n)
 end
 
 
-	puts "Answer: #{self_powers(1000)}"		# Answer: 9110846700
+puts "Answer: #{self_powers(1000)}"		# Answer: 9110846700

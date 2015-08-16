@@ -7,19 +7,14 @@ require 'prime'
 def e(n, limit)
 	k = Hash.new
 	limit.times {|i|
-		if k[rad(i + 1)] == nil then
-			k[rad(i + 1)] = []
-		end
+    k[rad(i + 1)] = [] if k[rad(i + 1)] == nil
 		k[rad(i + 1)] << i + 1
-		p i + 1
 	}
 	sum = 0
 	i = 0
 	until sum > n or sum == n
 		i += 1
-		if k[i] != nil then
-			sum += k[i].size
-		end
+    sum += k[i].size if k[i] != nil
 	end
 	return k[i][-((sum - n) + 1)]
 end
@@ -32,4 +27,4 @@ def rad(n)
 end
 
 
-	puts "Answer: #{e(10000,100000)}"	# Answer: 21417
+puts "Answer: #{e(10000,100000)}"	# Answer: 21417

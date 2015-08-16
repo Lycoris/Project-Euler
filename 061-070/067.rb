@@ -6,4 +6,4 @@
 require '../lib/triangle'
 
 
-	puts "Answer: #{maximum_path_sum("triangle.txt")}"		# Answer: 7273
+puts "Answer: #{maximum_path_sum("triangle.txt")}"		# Answer: 7273

@@ -11,12 +11,9 @@ def poker
 			c = l.split(" ")
 			p1 = [c[0].split(//), c[1].split(//), c[2].split(//), c[3].split(//), c[4].split(//)]
 			p2 = [c[5].split(//), c[6].split(//), c[7].split(//), c[8].split(//), c[9].split(//)]
-			if p1_is_win(p1, p2) == true then
-				p1_win += 1
-			end
+      p1_win += 1 if p1_is_win(p1, p2) == true
 		end
 	}
-
 	return p1_win
 end
 
@@ -61,9 +58,7 @@ end
 def number_map(p)
 	number = {"2" => 1, "3" => 2, "4" => 3, "5" => 4, "6" => 5, "7" => 6, "8" => 7, "9" => 8, "T" => 9, "J" => 10, "Q" => 11, "K" => 12, "A" => 13}
 	numbers = Array.new
-	5.times {|i|
-		numbers << number[p[i][0]]
-	}
+	5.times {|i| numbers << number[p[i][0]]}
 	numbers.sort!
 	return numbers
 end
@@ -81,9 +76,7 @@ def hand(p)
 	# 8 : Straight Flush
 	# 9 : Royal Flush
 	s = Array.new
-	5.times {|i|
-		s << p[i][1]
-	}
+	5.times {|i| s << p[i][1]}
 	n = number_map(p)
 	straight = false
 	4.downto(1) {|i|

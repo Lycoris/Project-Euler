@@ -21,4 +21,4 @@ def number_spiral(n)
 end
 
 
-	puts "Answer: #{number_spiral(1001)}"	# Answer: 669171001
+puts "Answer: #{number_spiral(1001)}"	# Answer: 669171001

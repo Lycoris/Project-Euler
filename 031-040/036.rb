@@ -4,9 +4,7 @@
 
 def palindrome(n)
 	answer = 0
-	(n - 1).times {|i|
-		answer += i + 1 if is_rev(i + 1) == true and is_rev((i + 1).to_s(2)) == true
-	}
+	(n - 1).times {|i| answer += i + 1 if is_rev(i + 1) == true and is_rev((i + 1).to_s(2)) == true }
 	return answer
 end
 
@@ -19,4 +17,4 @@ def is_rev(n)
 end
 
 
-	puts "Answer: #{palindrome(1000000)}"	# Answer: 872187
+puts "Answer: #{palindrome(1000000)}"	# Answer: 872187

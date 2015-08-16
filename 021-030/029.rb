@@ -15,4 +15,4 @@ def distinct_powers(x, y)
 end
 
 
-	puts "Answer: #{distinct_powers(100, 100)}"		# Answer: 9183
+puts "Answer: #{distinct_powers(100, 100)}"		# Answer: 9183

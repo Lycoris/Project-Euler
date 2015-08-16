@@ -18,4 +18,4 @@ def s(p)
   return ans
 end
 
-  puts "Answer: #{s(8)}"   # Answer: 139602943319822
+puts "Answer: #{s(8)}"   # Answer: 139602943319822

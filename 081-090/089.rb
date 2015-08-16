@@ -4,11 +4,7 @@
 
 def save_letter(file)
   ans = 0
-  open(file) {|f|
-    f.each {|line|
-      ans += refine(line)
-    }
-  }
+  open(file) {|f| f.each {|line| ans += refine(line)}}
   return ans
 end
 
@@ -34,4 +30,4 @@ def refine(l)
 end
 
 
-  puts "Answer: #{save_letter("roman.txt")}"   # Answer: 743
+puts "Answer: #{save_letter("roman.txt")}"   # Answer: 743

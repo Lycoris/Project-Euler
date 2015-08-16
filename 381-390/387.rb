@@ -14,23 +14,13 @@ def harshad_numbers(l)
       rth << a
       next
     end
-    rth[d - 1].each {|h|
-      0.upto(9) {|i|
-        a << 10 * h + i if (10 * h + i) % digit_sum(10 * h + i) == 0
-      }
-    }
+    rth[d - 1].each {|h| 0.upto(9) {|i| a << 10 * h + i if (10 * h + i) % digit_sum(10 * h + i) == 0}}
     rth << a
   }
   srth = []
-  rth.flatten.each {|h|
-    srth << h if (h / digit_sum(h)).prime?
-  }
+  rth.flatten.each {|h| srth << h if (h / digit_sum(h)).prime?}
   srthp = 0
-  srth.each {|h|
-    0.upto(9) {|i|
-      srthp += 10 * h + i if (10 * h + i).prime?
-    }
-  }
+  srth.each {|h| 0.upto(9) {|i| srthp += 10 * h + i if (10 * h + i).prime?}}
   return srthp
 end
 

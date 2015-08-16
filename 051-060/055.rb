@@ -47,6 +47,6 @@ def is_palindromic(num)
 end
 
 
-	puts "Answer: #{how_many_Lychrel(9999)}"	# Answer: 249
+puts "Answer: #{how_many_Lychrel(9999)}"	# Answer: 249
 
 

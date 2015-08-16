@@ -70,11 +70,9 @@ end
 
 def checkout_loop(n)
 	ans = 0
-	n.times {|i|
-		ans += darts_checkout(i + 1)
-	}
+	n.times {|i| ans += darts_checkout(i + 1)}
 	return ans
 end
 
 
-	puts "Answer: #{checkout_loop(99)}"		# Answer: 38182
+puts "Answer: #{checkout_loop(99)}"		# Answer: 38182

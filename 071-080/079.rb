@@ -14,16 +14,11 @@ def Passcode_derivation(keylog)
 		frequency[i].default = 0
 	}
 	passcode = ""
-	log.each_index {|try|
-		log[try].each_index {|col|
-			frequency[try][log[try][col]] += 1
-		}
-	}
+	log.each_index {|try| log[try].each_index {|col| frequency[try][log[try][col]] += 1}}
 	until frequency[0].size == 1
 		frequency[0].each_key {|k|
 			if frequency[1][k] == 0 and frequency[2][k] == 0 then
 				passcode += k
-				p passcode
 				frequency = Array.new(3)
 				3.times {|i|
 					frequency[i] = {}
@@ -46,11 +41,7 @@ def Passcode_derivation(keylog)
 						end
 					}
 				}
-				log.each_index {|try|
-					log[try].each_index {|col|
-						frequency[try][log[try][col]] += 1
-					}
-				}
+				log.each_index {|try| log[try].each_index {|col| frequency[try][log[try][col]] += 1}}
 				break
 			end
 		}
@@ -58,4 +49,4 @@ def Passcode_derivation(keylog)
 	return passcode
 end
 
-	puts "Answer: #{Passcode_derivation("keylog.txt")}"		# Answer: 73162890
+puts "Answer: #{Passcode_derivation("keylog.txt")}"		# Answer: 73162890

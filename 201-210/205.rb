@@ -24,4 +24,4 @@ def sum(ary)
 end
 
 
-	puts "Answer: #{dicegame}"	# Answer: 0.5731441
+puts "Answer: #{dicegame}"	# Answer: 0.5731441

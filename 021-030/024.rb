@@ -8,11 +8,9 @@ def lexicographic_permutations(x)
 	a = 0
 	numbers.permutation(10) {|arr|
 		a += 1
-		if a == x then
-			return arr.join
-		end
+    return arr.join if a == x
 	}
 end
 
 
-	puts "Answer: #{lexicographic_permutations(1000000)}"	# Answer: 2783915460
+puts "Answer: #{lexicographic_permutations(1000000)}"	# Answer: 2783915460

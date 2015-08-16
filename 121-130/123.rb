@@ -21,4 +21,4 @@ def r(n, p)
 end
 
 
-	puts "Answer: #{prime_square_remainders(10000000000)}"	# Answer: 21035
+puts "Answer: #{prime_square_remainders(10000000000)}"	# Answer: 21035

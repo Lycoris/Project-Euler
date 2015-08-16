@@ -25,4 +25,4 @@ def d(n)
 end
 
 
-	puts "Answer: #{amicable_numbers(10000)}"	# Answer: 31626
+puts "Answer: #{amicable_numbers(10000)}"	# Answer: 31626

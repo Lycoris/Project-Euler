@@ -34,4 +34,4 @@ def prime_power_triples(l)
 end
 
 
-	puts "Answer: #{prime_power_triples(50000000)}"		# Answer: 1097343
+puts "Answer: #{prime_power_triples(50000000)}"		# Answer: 1097343

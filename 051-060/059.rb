@@ -67,4 +67,4 @@ end
 
 
 
-	puts "Answer: #{XOR_decryption("cipher1.txt")}"		# Answer: 107359
+puts "Answer: #{XOR_decryption("cipher1.txt")}"		# Answer: 107359

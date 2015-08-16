@@ -31,4 +31,4 @@ def origin_is_inner(file)
 end
 
 
-	puts "Answer: #{origin_is_inner("triangles.txt")}"		# Answer: 228
+puts "Answer: #{origin_is_inner("triangles.txt")}"		# Answer: 228

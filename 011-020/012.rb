@@ -24,4 +24,4 @@ def triangular(n)
 end
 
 
-	puts "Answer: #{highly_divisible(500)}"		# Answer: 76576500
+puts "Answer: #{highly_divisible(500)}"		# Answer: 76576500

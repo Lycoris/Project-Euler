@@ -11,12 +11,8 @@ def disc_game_prize(g)
 	g.downto(w) {|n|
 		arr.combination(n).to_a.each {|a|
 			p = 1
-			a.each {|b|
-				p *= Rational(1 ,b + 1)
-			}
-			(arr - a).each {|b|
-				p *= Rational(b, b + 1)
-			}
+			a.each {|b| p *= Rational(1 ,b + 1)}
+			(arr - a).each {|b| p *= Rational(b, b + 1)}
 			psum += p
 		}
 	}
@@ -29,4 +25,4 @@ def disc_game_prize(g)
 	return prize
 end
 
-	puts "Answer: #{disc_game_prize(15)}"	# Answer: 2269
+puts "Answer: #{disc_game_prize(15)}"	# Answer: 2269

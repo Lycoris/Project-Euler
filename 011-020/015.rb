@@ -11,4 +11,4 @@ def lattice_paths(x, y)
 end
 
 
-	puts "Answer: #{lattice_paths(20, 20)}"		# Answer: 137846528820
+puts "Answer: #{lattice_paths(20, 20)}"		# Answer: 137846528820

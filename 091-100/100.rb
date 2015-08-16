@@ -12,4 +12,4 @@ def arranged_probability
 end
 
 
-  puts "Answer: #{arranged_probability}"  # Answer: 756872327473
+puts "Answer: #{arranged_probability}"  # Answer: 756872327473

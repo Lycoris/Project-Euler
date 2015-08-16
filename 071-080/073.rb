@@ -12,4 +12,4 @@ def counting_fractions(d)
 end
 
 
-	puts "Answer: #{counting_fractions(12000)}"		# Answer: 7295372
+puts "Answer: #{counting_fractions(12000)}"		# Answer: 7295372

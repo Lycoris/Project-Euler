@@ -23,4 +23,4 @@ def ordered_fraction(n, d, l)
 end
 
 
-	puts "Answer: #{ordered_fraction(3, 7, 1000000)}"	# Answer: 428570
+puts "Answer: #{ordered_fraction(3, 7, 1000000)}"	# Answer: 428570

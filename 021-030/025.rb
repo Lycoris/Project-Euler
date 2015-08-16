@@ -8,11 +8,9 @@ def fibonacci_sequence_digit(x)
 	n = 2
 	while 1 > 0
 		n += 1
-		if Math.log10(fib(n)).floor == x - 1 then
-			return n
-		end
+    return n if Math.log10(fib(n)).floor == x - 1
 	end
 end
 
 
-	puts "Answer: #{fibonacci_sequence_digit(1000)}"  # Answer: 4782
+puts "Answer: #{fibonacci_sequence_digit(1000)}"  # Answer: 4782

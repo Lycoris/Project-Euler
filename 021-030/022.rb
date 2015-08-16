@@ -10,14 +10,11 @@ def name_score(file)
   f = open(file).read.delete('"').split(",").sort
   f.each_index {|i|
     score = 0
-    f[i].split(//).each {|l|
-      score += s[l]
-    }
+    f[i].split(//).each {|l| score += s[l]}
     ans += score * (i + 1)
   }
   return ans
 end
 
 
-  puts "Answer: #{name_score("name.txt")}"    # Answer: 871198282
-
+puts "Answer: #{name_score("name.txt")}"    # Answer: 871198282

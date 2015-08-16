@@ -7,9 +7,7 @@ def a(n)
 	powers
 	@arr.each_index {|i|
 		k = @arr[i]
-		if Math.log10(k) - Math.log10(k).floor == 0 then
-			next
-		end
+    next if Math.log10(k) - Math.log10(k).floor == 0
 		ds = digit_sum(k)
 		while 1 > 0
 			if k % ds == 0 then
@@ -35,14 +33,8 @@ end
 
 def powers
 	@arr = []
-	for a in 2..100
-		for b in 2..100
-			@arr << a ** b
-		end
-	end
-	@arr.delete_if {|x|
-		x < 10
-	}
+  2.upto(100) {|a| 2.upto(100) {|b| @arr << a ** b}}
+	@arr.delete_if {|x| x < 10}
 	@arr = @arr.uniq.sort
 end
 
@@ -55,4 +47,4 @@ def digit_sum(n)
 end
 
 
-	puts "Answer: #{a(30)}"	# Answer: 248155780267521
+puts "Answer: #{a(30)}"	# Answer: 248155780267521

@@ -32,4 +32,4 @@ def largest_product_in_grid(filename)
 end
 
 
-  puts "Answer: #{largest_product_in_grid("011.txt")}"  # Answer: 70600674
+puts "Answer: #{largest_product_in_grid("011.txt")}"  # Answer: 70600674
