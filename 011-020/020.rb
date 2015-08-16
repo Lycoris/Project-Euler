@@ -2,14 +2,7 @@
 #
 #
 
-
-def factorial_digit_sum(x)
-	a, s = 1, 0
-	x.downto(2) {|n| a *= n}
-	a = a.to_s.split(//)
-	a.each {|i| s += i.to_i}
-	return s
-end
+require '../lib/fact'
 
 
-	puts "Answer: #{factorial_digit_sum(100)}"	# Answer: 648
+	puts "Answer: #{fact(100).to_s.split(//).map(&:to_i).inject(:+)}"	# Answer: 648
